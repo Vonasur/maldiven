@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)https://intranet.tui-takeoff.de/de/newsletter/open/subscribe/a400736b5f9d1daa5d8ef2d8803c24ef -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Robinson Club Noonu</title>
+
+
+    <!--  VIMEO  -->
+    <link href="libs/jquery.mb.vimeo_player-master/dist/css/jquery.mb.vimeo_player.min.css" media="all" rel="stylesheet" type="text/css">
+
+    <link type="text/css" rel="stylesheet" href="assets/css/style_bg.css" media="screen,projection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!--  VIMEO  -->
+    <script src="libs/jquery.mb.vimeo_player-master/dist/jquery.mb.vimeo_player.js"></script>
+
+    <script>
+        var myPlayer;
+        jQuery(function() {
+            myPlayer = jQuery("#P1").vimeo_player();
+            myPlayer.on("VPStart VPFallback", function() {
+                $("#loader").fadeOut(2000);
+            });
+        });
+        $(document).ready(function() {
+            $('#sound-button').click(function() {
+                myPlayer.v_toggle_volume();
+                $(this).toggleClass('music-enabled');
+                $('#header').slideUp(2000);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="P1" class="player" data-property="{videoURL:'https://vimeo.com/269589262',containment:'#video',startAt:0,mute:true,autoPlay:true,loop:true,opacity:1}">
+    </div>
+    <div id="video"></div>
+
+
+    <div class="maincontainer">
+
+        <div class="container1">
+            <img src="assets/img/loading.gif" alt="" id="loader">
+            <h1 id="header">Robinson Club Noonu</h1>
+        </div>
+        <div class="button">
+            <button id="sound-button">music</button>
+        </div>
+
+        <div class="mobile">
+            <iframe src="https://player.vimeo.com/video/269589262?title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+
+        <div class="footer">
+            <div class="footer-container">
+                <div class="container2">
+                    TLT Urlaubsreisen GmbH<br>
+                    Baumschulenallee 16<br>
+                    30625 Hannover
+                </div>
+                <div class="container2">
+                    Telefon: 0511 / 898 804 - 10<br> Telefax: 0511 / 898 804 - 44<br> eMail: info[at]feria.de
+                </div>
+                <div class="container2">
+                    Geschäftsführung: <br> Kurt Koch, Peter Wittmann
+                </div>
+                <div class="container2">
+                    Sitz: <br> Hannover <br> HRB 61344 Umsatzsteuer-ID: DE1142204574
+                </div>
+
+            </div>
+            <div class="footer-container text-center">
+                Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
